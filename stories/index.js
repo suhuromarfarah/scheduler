@@ -157,15 +157,27 @@ storiesOf("InterviewerListItem", module)
         onConfirm={action("onConfirm")}
         onCancel={action("onCancel")}
       />))
-    .add("Status", () => (
+    .add("Status-Deleting", () => (
       <Status 
         message="Deleting"
       />
       ))
+    .add("Status-Saving", () => (
+      <Status 
+        message="Saving"
+      />
+      ))
       
-      .add("Error", () => (
+      .add("Error-deleting", () => (
       <Error
         message="Could not delete appointment."
         onClose={action("onClose")}
       />
       ))
+
+      .add("Error-saving", () => (
+        <Error
+          message="Could not save appointment."
+          onClose={action("onClose")}
+        />
+        ))
