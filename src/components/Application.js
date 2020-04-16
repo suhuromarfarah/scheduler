@@ -2,6 +2,7 @@ import React, {useState} from "react";
 
 import "components/Application.scss";
 import DayList from "components/DayList"
+import Appointment from "components/Appointment"
 
 const days = [
   {
@@ -21,12 +22,57 @@ const days = [
   },
 ];
 
+const appointments = [
+  {
+    id: 1,
+    time: "12pm",
+  },
+  {
+    id: 2,
+    time: "1pm",
+    interview: {
+      student: "Lydia Miller-Jones",
+      interviewer: {
+        id: 1,
+        name: "Sylvia Palmer",
+        avatar: "https://i.imgur.com/LpaY82x.png",
+      }
+    }
+  },
+  {
+    id: 3,
+    time: "3pm",
+  },
+  {
+    id: 4,
+    time: "4pm",
+  },
+  {
+    id: 5,
+    time: "5pm",
+    interview: {
+      student: "Suhur",
+      interviewer: {
+        id: 1,
+        name: "Sylvia Palmer",
+        avatar: "https://i.imgur.com/LpaY82x.png",
+      }
+    }
+  },
+
+];
+
 export default function Application(props) {
   const[day, setDay] = useState("Monday")
+  const listAppointments = appointments.map(appointment => {
+    return (
+      <Appointment key = {appointment.id} {...appointment}/>
+    )
+  })
+  console.log(listAppointments)
   return (
     <main className="layout">
       <section className="sidebar">
-        {/* Replace this with the sidebar elements during the "Project Setup & Familiarity" activity. */}
         <img className="sidebar--centered" src="images/logo.png" alt="Interview Scheduler" />
         <hr className="sidebar__separator sidebar--centered" />
         <nav className="sidebar__menu">
@@ -42,7 +88,7 @@ export default function Application(props) {
         lt="Lighthouse Labs"/>
       </section>
       <section className="schedule">
-        {/* Replace this with the schedule elements durint the "The Scheduler" activity. */}
+        <ul>{listAppointments}</ul>
       </section>
     </main>
   );
