@@ -18,3 +18,15 @@ export function getInterview(state, interview) {
     return { ...interview, interviewer };
 }
 }
+
+export function getInterviewsForDay(state, day) {
+  const filteredAppointments = [];
+  state.days.forEach(element => {
+    if (element.name === day) {
+      element.interviewers.forEach(id => {
+        filteredAppointments.push(state.interviewers[id]);
+      });
+    }
+  });
+  return filteredAppointments;
+}

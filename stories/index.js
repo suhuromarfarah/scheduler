@@ -46,23 +46,23 @@ storiesOf("Button", module)
     <DayListItem name="Tuesday" setDay={action("setDay")} spots={5} /> // action() allows us to create a callback that appears in the actions panel when clicked
   ));
 
-  const days = [
-    {
-      id: 1,
-      name: "Monday",
-      spots: 2,
-    },
-    {
-      id: 2,
-      name: "Tuesday",
-      spots: 5,
-    },
-    {
-      id: 3,
-      name: "Wednesday",
-      spots: 0,
-    },
-  ];
+  // const days = [
+  //   {
+  //     id: 1,
+  //     name: "Monday",
+  //     spots: 2,
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Tuesday",
+  //     spots: 5,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Wednesday",
+  //     spots: 0,
+  //   },
+  // ];
   
   storiesOf("DayList", module)
     .addParameters({
@@ -76,11 +76,11 @@ storiesOf("Button", module)
     ));
 
 // interviewer 
-const interviewer = {
-  id: 1,
-  name: "Sylvia Palmer",
-  avatar: "https://i.imgur.com/LpaY82x.png"
-};
+// const interviewer = {
+//   id: 1,
+//   name: "Sylvia Palmer",
+//   avatar: "https://i.imgur.com/LpaY82x.png"
+// };
 
 storiesOf("InterviewerListItem", module)
   .addParameters({
