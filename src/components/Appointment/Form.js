@@ -18,12 +18,13 @@ export default function Form(props) {
       setError("Student name cannot be blank");
       return;
     }
-    if (interviewer === null) {
+    else if (interviewer === null) {
       setError("An interviewer must be chosen");
-      // return;
+      return;
+    } else {
+      setError("");
+      props.onSave(name, interviewer);
     }
-    setError("");
-    props.onSave(name, interviewer);
   }
 
   function cancel() {
