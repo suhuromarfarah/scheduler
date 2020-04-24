@@ -1,11 +1,9 @@
 # Interview Scheduler
 Using some of the latest tools and techniques, I built Scheduler, a React application that essentially allows students to book, cancel, and change interviews with their interviewer (mentor, teachers, etc). This was all done using an API with a WebSocket server to build realtime experience. Scheduler was built with an extensive unit, integration, and end-to-end testing using Jest, Storybook, and Cypress.
 
-<<<<<<< HEAD
+
 ![](https://github.com/suhuromarfarah/scheduler/blob/master/scheduler.gif)
-=======
-![](https://github.com/asmxali/scheduler/blob/master/scheduler.gif)
->>>>>>> 78d4eb0127b683eeb3de30291f805b8d640e48ff
+
 
 # Behavioural Requirements
 
