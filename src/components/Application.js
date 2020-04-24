@@ -41,6 +41,7 @@ export default function Application(props) {
               days={state.days}
               day={state.day}
               setDay={setDay}
+              data-testid = "day"
             />
           </nav>
           <img

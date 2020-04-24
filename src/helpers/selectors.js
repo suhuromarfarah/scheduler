@@ -14,6 +14,9 @@ export function getInterview(state, interview) {
   if (!interview) {
     return null;
   } else {
+      if(!interview.interviewer) {
+        return null;
+      }
     let interviewer = state.interviewers[interview.interviewer];
     return { ...interview, interviewer };
 }
