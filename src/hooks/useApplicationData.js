@@ -18,9 +18,9 @@ export default function useApplicationData() {
 
   useEffect(()=>{
     Promise.all([
-      Promise.resolve(axios.get("http://localhost:8002/api/days")),
-      Promise.resolve(axios.get("http://localhost:8002/api/appointments")),
-      Promise.resolve(axios.get("http://localhost:8002/api/interviewers")),
+      Promise.resolve(axios.get("http://localhost:8001/api/days")),
+      Promise.resolve(axios.get("http://localhost:8001/api/appointments")),
+      Promise.resolve(axios.get("http://localhost:8001/api/interviewers")),
       ]).then(all => {
         setState(prev => ({ 
           ...prev,
@@ -46,7 +46,7 @@ export default function useApplicationData() {
       return day;
     })
     
-    return (axios.put(`http://localhost:8002/api/appointments/${id}`, appointment).then(() => { setState({
+    return (axios.put(`http://localhost:8001/api/appointments/${id}`, appointment).then(() => { setState({
       ...state,
       appointments,
       days
@@ -70,7 +70,7 @@ export default function useApplicationData() {
       return day;
     })
     
-    return (axios.delete(`http://localhost:8002/api/appointments/${id}`, appointment).then(setState({
+    return (axios.delete(`http://localhost:8001/api/appointments/${id}`, appointment).then(setState({
       ...state,
       appointments,
       days
